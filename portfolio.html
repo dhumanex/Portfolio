@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Web Personal</title>
+  <meta name="description" content="Web personal para practicar HTML, CSS y JS." />
+
+  <link rel="stylesheet" href="portfolio.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" id="top">
+    <nav class="nav">
+      <a class="logo" href="#top">David Humanes Ludeña</a>
+
+      <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
+        ☰
+      </button>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <button class="btn btn--ghost" id="themeBtn" aria-label="Cambiar tema">
+        🌙
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <p class="badge">Portfolio</p>
+          <h1>Hola, soy <span class="accent">David Humanes</span>.</h1>
+          <p class="lead">
+            Estoy practicando front-end con una web personal sencilla, limpia y responsive.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn" href="#proyectos">Ver proyectos</a>
+            <a class="btn btn--soft" href="#contacto">Contactar</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <span class="stat__num" data-count="6">0</span>
+              <span class="stat__label">mini proyectos</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="12">0</span>
+              <span class="stat__label">semanas practicando</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="100">0</span>
+              <span class="stat__label">% ganas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card hero__card">
+          <div class="avatar" aria-hidden="true">🙂</div>
+          <h2 class="card__title">Objetivo</h2>
+          <p class="card__text">
+            Aprender estructura, estilo y comportamiento: semántica, layout, responsive, DOM,
+            eventos y pequeños componentes.
+          </p>
+          <ul class="checklist">
+            <li>✅ Navegación responsive</li>
+            <li>✅ Modo oscuro</li>
+            <li>✅ Scroll suave + botón “arriba”</li>
+            <li>✅ Contador animado</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section class="section" id="sobre-mi">
+      <div class="container">
+        <h2>Sobre mí</h2>
+        <p class="muted">
+          Aquí escribes 4-6 líneas: qué estudias, qué te gusta hacer, qué buscas aprender.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3 class="card__title">Lo que estoy practicando</h3>
+            <p class="card__text">
+              HTML semántico, layouts con grid/flex, tipografía, accesibilidad básica y JS para
+              interacción.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Ahora mismo</h3>
+            <p class="card__text">
+              Montando componentes reutilizables: botones, tarjetas, secciones, y un formulario.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section class="section" id="proyectos">
+      <div class="container">
+        <div class="section__head">
+          <h2>Proyectos</h2>
+          <input class="input" id="projectSearch" type="search" placeholder="Filtrar proyectos…" />
+        </div>
+
+        <div class="cards" id="projectGrid">
+          <article class="card project" data-title="Visor de imágenes">
+            <h3 class="card__title">Visor de imágenes</h3>
+            <p class="card__text">Un mini carrusel con botones y puntos.</p>
+            <div class="tags">
+              <span class="tag">JS</span><span class="tag">DOM</span><span class="tag">UI</span>
+            </div>
+          </article>
+
+          <article class="card project" data-title="Landing sencilla">
+            <h3 class="card__title">Landing sencilla</h3>
+            <p class="card__text">Sección hero + beneficios + CTA.</p>
+            <div class="tags">
+              <span class="tag">HTML</span><span class="tag">CSS</span>
+            </div>
+          </article>
+
+          <article class="card project" data-title="Formulario con validación">
+            <h3 class="card__title">Formulario con validación</h3>
+            <p class="card__text">Validación básica y mensaje bonito.</p>
+            <div class="tags">
+              <span class="tag">JS</span><span class="tag">Forms</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2>Skills</h2>
+
+        <div class="skills">
+          <div class="skill">
+            <span>HTML</span>
+            <div class="bar"><div class="bar__fill" style="width: 70%"></div></div>
+          </div>
+          <div class="skill">
+            <span>CSS</span>
+            <div class="bar"><div class="bar__fill" style="width: 65%"></div></div>
+          </div>
+          <div class="skill">
+            <span>JavaScript</span>
+            <div class="bar"><div class="bar__fill" style="width: 45%"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <h2>Contacto</h2>
+        <p class="muted">Este formulario no envía emails: es para practicar JS.</p>
+
+        <form class="card form" id="contactForm" novalidate>
+          <label>
+            Nombre
+            <input class="input" name="name" type="text" required minlength="2" placeholder="Tu nombre" />
+          </label>
+
+          <label>
+            Email
+            <input class="input" name="email" type="email" required placeholder="tu@email.com" />
+          </label>
+
+          <label>
+            Mensaje
+            <textarea class="input" name="message" rows="4" required minlength="10"
+              placeholder="Cuéntame algo…"></textarea>
+          </label>
+
+          <button class="btn" type="submit">Enviar</button>
+          <p class="form__msg" id="formMsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__row">
+      <p>© <span id="year"></span> TuNombre</p>
+      <a href="#top" class="link" id="toTop">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script src="portfolio.js" defer></script>
+</body>
+</html>
